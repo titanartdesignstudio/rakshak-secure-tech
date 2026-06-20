@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rakshak Secure Tech | AI Security Infrastructure",
+  title: "RakshakSecure Tech | Protection Through Technology ",
   description:
     "AI-powered security infrastructure for governments, enterprises and critical assets.",
   keywords: [

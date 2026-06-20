@@ -23,11 +23,11 @@ return ( <footer className="relative overflow-hidden bg-[#050B18] text-white">
 
           <div>
             <h3 className="text-xl font-bold">
-              Rakshak Secure Tech
+              RakshakSecure Tech
             </h3>
 
             <p className="text-sm text-slate-400">
-              AI Security Ecosystem
+              Protection Through Technology
             </p>
           </div>
         </div>
@@ -188,7 +188,7 @@ return ( <footer className="relative overflow-hidden bg-[#050B18] text-white">
     {/* Bottom Bar */}
     <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-500 md:flex-row">
       <p>
-        © 2026 Rakshak Secure Tech Pvt. Ltd. All rights reserved.
+        © 2026 RakshakSecure Tech Pvt. Ltd. All rights reserved.
       </p>
 
       <div className="flex gap-6">

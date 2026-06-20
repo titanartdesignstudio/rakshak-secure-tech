@@ -27,11 +27,11 @@ export default function Header() {
 
             <div>
               <h2 className="font-bold text-white transition group-hover:text-cyan-300">
-                Rakshak Secure Tech
+                RakshakSecure Tech
               </h2>
 
               <p className="text-xs tracking-wider text-slate-400">
-                AI Security Ecosystem
+                Protection Through Technology
               </p>
             </div>
           </Link>
