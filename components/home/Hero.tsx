@@ -29,7 +29,7 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 pt-40 pb-24 lg:pt-44 lg:pb-32">
-        <div className="grid items-center gap-20 lg:grid-cols-2">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
 
           {/* LEFT SIDE */}
           <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className="mt-8 max-w-[700px] text-5xl font-bold leading-[0.95] md:text-7xl xl:text-8xl">
+            <h1 className="mt-8 max-w-[700px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
               AI-Powered Security
               <br />
               For Critical
@@ -64,7 +64,7 @@ export default function Hero() {
             </p>
 
             {/* Buttons */}
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button className="group flex items-center justify-center gap-2 rounded-xl bg-[#005BAC] px-8 py-4 font-semibold text-white transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,91,172,0.6)]">
                 Explore Solutions
 
@@ -125,7 +125,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-           className="relative flex min-h-[700px] items-center justify-center"
+           className="relative flex min-h-[400px] lg:min-h-[700px] items-center justify-center"
           >
             {/* Animated Orb */}
             <HeroOrb />

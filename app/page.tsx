@@ -1,5 +1,3 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Industries from "@/components/home/Industries";
 import Hero from "@/components/home/Hero";
 import TrustStrip from "@/components/home/TrustStrip";
@@ -12,7 +10,7 @@ import TechnologyPreview from "@/components/home/TechnologyPreview";
 export default function HomePage() {
   return (
     <>
-      <Header />
+      
 
       <main>
         <Hero />
@@ -30,7 +28,7 @@ export default function HomePage() {
         <CTA />
       </main>
 
-      <Footer />
+    
     </>
   );
 }
