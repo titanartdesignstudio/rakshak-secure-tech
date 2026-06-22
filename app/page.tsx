@@ -6,6 +6,8 @@ import SolutionsGrid from "@/components/home/SolutionsGrid";
 import WhyRakshak from "@/components/home/WhyRakshak";
 import CTA from "@/components/home/CTA";
 import TechnologyPreview from "@/components/home/TechnologyPreview";
+import SecurityPillars from "@/components/home/SecurityPillars";
+import ProcessFlow from "@/components/home/ProcessFlow";
 
 export default function HomePage() {
   return (
@@ -17,13 +19,15 @@ export default function HomePage() {
 
         <TrustStrip />
 
+        <SecurityPillars />
         <SecurityEcosystem />
 
         <SolutionsGrid />
         <Industries />
         
         <TechnologyPreview />
-        <WhyRakshak />
+        <ProcessFlow/>
+         <WhyRakshak />
 
         <CTA />
       </main>

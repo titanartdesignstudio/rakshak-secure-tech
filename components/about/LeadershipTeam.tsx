@@ -4,15 +4,18 @@ import { motion } from "framer-motion";
 import { leadershipTeam } from "@/lib/leadership";
 
 export default function LeadershipTeam() {
+  const founder = leadershipTeam[0];
+  const executives = leadershipTeam.slice(1);
+
   return (
     <section className="relative overflow-hidden py-32">
 
       {/* Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
 
-        <div className="absolute left-[-10%] top-0 h-[600px] w-[600px] rounded-full bg-cyan-500/8 blur-[180px]" />
+        <div className="absolute left-[-10%] top-0 h-[650px] w-[650px] rounded-full bg-cyan-500/10 blur-[180px]" />
 
-        <div className="absolute right-[-10%] bottom-0 h-[600px] w-[600px] rounded-full bg-blue-500/8 blur-[180px]" />
+        <div className="absolute right-[-10%] bottom-0 h-[650px] w-[650px] rounded-full bg-blue-500/10 blur-[180px]" />
 
       </div>
 
@@ -22,91 +25,92 @@ export default function LeadershipTeam() {
 
         <div className="mx-auto max-w-4xl text-center">
 
-          <p className="text-sm font-semibold tracking-[0.35em] text-cyan-400">
+          <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-5 py-2 text-xs tracking-[0.35em] text-cyan-300">
             EXECUTIVE LEADERSHIP
-          </p>
+          </span>
 
-          <h2 className="mt-5 text-5xl font-bold md:text-7xl">
-
+          <h2 className="mt-8 text-5xl font-bold leading-tight md:text-7xl">
             Leadership Driving
-
             <span className="block text-cyan-400">
               Rakshak Secure Tech
             </span>
-
           </h2>
 
-          <p className="mt-8 text-lg leading-8 text-slate-400">
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-400">
             A multidisciplinary leadership team bringing together
             expertise in artificial intelligence, public affairs,
-            enterprise technology, procurement, finance and
+            enterprise technology, finance, procurement and
             strategic operations.
           </p>
 
         </div>
 
-        {/* Founder Highlight */}
+        {/* Founder Section */}
 
-        <div className="mt-20">
+        {founder && (
 
-          {leadershipTeam.slice(0, 1).map((member) => (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative mt-24 overflow-hidden rounded-[40px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 via-white/[0.03] to-blue-500/10 p-10 md:p-14"
+          >
 
-            <div
-              key={member.name}
-              className="relative overflow-hidden rounded-[36px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 via-white/[0.03] to-blue-500/10 p-10 md:p-14"
-            >
+            <div className="absolute right-6 top-0 text-[160px] font-black text-white/[0.03]">
+              CEO
+            </div>
 
-              <div className="absolute right-0 top-0 text-[180px] font-black text-white/[0.03]">
-                CEO
-              </div>
+            <div className="grid gap-10 lg:grid-cols-[220px_1fr] lg:items-center">
 
-              <div className="grid gap-10 lg:grid-cols-[180px_1fr] lg:items-center">
+              {/* Founder Avatar */}
 
-                {/* Avatar */}
+              <div className="flex justify-center lg:justify-start">
 
-                <div className="flex justify-center lg:justify-start">
+                <div className="relative">
 
-                  <div className="flex h-40 w-40 items-center justify-center rounded-[32px] border border-cyan-500/20 bg-cyan-500/10 text-5xl font-bold text-cyan-300">
-                    {member.initials}
+                  <div className="absolute inset-0 rounded-[36px] bg-cyan-500 blur-3xl opacity-30" />
+
+                  <div className="relative flex h-44 w-44 items-center justify-center rounded-[36px] border border-cyan-500/20 bg-cyan-500/10 text-6xl font-bold text-cyan-300 backdrop-blur-xl">
+                    {founder.initials}
                   </div>
 
                 </div>
 
-                {/* Content */}
+              </div>
 
-                <div>
+              {/* Founder Content */}
 
-                  <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs tracking-[0.25em] text-cyan-300">
-                    FOUNDER & LEADERSHIP
-                  </span>
+              <div>
 
-                  <h3 className="mt-6 text-4xl font-bold">
-                    {member.name}
-                  </h3>
+                <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs tracking-[0.25em] text-cyan-300">
+                  FOUNDER & LEADERSHIP
+                </span>
 
-                  <p className="mt-3 text-lg font-medium text-cyan-400">
-                    {member.role}
-                  </p>
+                <h3 className="mt-6 text-4xl font-bold md:text-5xl">
+                  {founder.name}
+                </h3>
 
-                  <p className="mt-6 max-w-4xl leading-8 text-slate-300">
-                    {member.bio}
-                  </p>
+                <p className="mt-3 text-lg font-medium text-cyan-400">
+                  {founder.role}
+                </p>
 
-                </div>
+                <p className="mt-6 max-w-4xl leading-8 text-slate-300">
+                  {founder.bio}
+                </p>
 
               </div>
 
             </div>
 
-          ))}
+          </motion.div>
 
-        </div>
+        )}
 
-        {/* Directors */}
+        {/* Executive Team */}
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
-          {leadershipTeam.slice(1).map((member, index) => (
+          {executives.map((member, index) => (
 
             <motion.div
               key={member.name}
@@ -117,18 +121,18 @@ export default function LeadershipTeam() {
                 duration: 0.45,
                 delay: index * 0.08,
               }}
-              className="group relative overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-500/30 hover:shadow-[0_0_60px_rgba(0,255,255,0.08)]"
+              className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-500/30 hover:shadow-[0_0_60px_rgba(0,255,255,0.08)]"
             >
+
+              {/* Hover Glow */}
+
+              <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
               {/* Number */}
 
-              <div className="absolute right-3 top-0 text-[80px] font-black text-white/[0.03]">
-                0{index + 1}
+              <div className="absolute right-4 top-0 text-[80px] font-black text-white/[0.03]">
+                {String(index + 1).padStart(2, "0")}
               </div>
-
-              {/* Glow */}
-
-              <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-cyan-500/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
               <div className="relative">
 
@@ -140,7 +144,7 @@ export default function LeadershipTeam() {
                   {member.name}
                 </h3>
 
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-cyan-400">
+                <p className="mt-2 text-xs uppercase tracking-[0.25em] text-cyan-400">
                   {member.role}
                 </p>
 

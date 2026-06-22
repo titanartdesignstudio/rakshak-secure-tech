@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="absolute left-[20%] top-[80%] h-2 w-2 rounded-full bg-cyan-300/40" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pt-40 pb-24 lg:pt-44 lg:pb-32">
+      <div className="relative mx-auto max-w-7xl px-4 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-44 lg:pb-32">
         <div className="grid items-center gap-10 lg:grid-cols-2">
 
           {/* LEFT SIDE */}
@@ -55,7 +55,7 @@ export default function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
+            <p className="mt-8 max-w-xl text-base sm:text-lg leading-7 sm:leading-8 text-slate-300">
               Advanced surveillance, facial recognition,
               threat intelligence, command center analytics
               and infrastructure protection designed for
@@ -87,7 +87,7 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="mt-14 grid grid-cols-3 gap-4">
+            <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div>
                 <h3 className="text-3xl font-bold text-blue-400">
                   99.7%
@@ -125,7 +125,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-           className="relative flex min-h-[400px] lg:min-h-[700px] items-center justify-center"
+           className="relative flex min-h-[320px] sm:min-h-[420px] lg:min-h-[700px] items-center justify-center"
           >
             {/* Animated Orb */}
             <HeroOrb />

@@ -7,8 +7,8 @@ bio: "Leading Rakshak's strategic vision, technology partnerships and AI-driven 
 },
 
 {
-  name: "Sakshi Sharma",
-  role: "Director – Liaisoning, Human Resources & Public Relations",
+  name: "Shakshi Sharma",
+  role: "Director – Liaison, Human Resources & Public Relations",
   initials: "SS",
   bio: "Leads stakeholder engagement, government liaisoning, human resource management and public relations initiatives. Responsible for organizational development, strategic communications, institutional partnerships and strengthening Rakshak's external and internal ecosystem.",
 },
